@@ -21,13 +21,14 @@ body {
   color: #1f3c44;
 }
 
-#upload-image {
+/* .shapeshifter {
   width: 40%;
   height: 40%;
   margin-bottom: 20px;
   user-select: none;
-  background: no-repeat center/100% url('./upload.svg');
-}
+  background-image: url('./assets/sprite_60fps.svg'); */
+  /* background: no-repeat center/100% url('./upload.svg'); */
+/* } */
 
 #upload-container label {
   font-weight: bold;
@@ -49,4 +50,25 @@ body {
   opacity: 0;
   position: absolute;
   z-index: -10;
+}
+
+/* Анимация SVG */
+@keyframes play90 {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -2160px 0px;
+  }
+}
+.shapeshifter {
+  animation-duration: 1500ms;
+  animation-timing-function: steps(90);
+  width: 40%;
+  height: 40%;
+  background-image: url('./assets/sprite_60fps.svg'); 
+  background-repeat: no-repeat;
+}
+.shapeshifter.play {
+  animation-name: play90;
 }
