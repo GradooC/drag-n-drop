@@ -22,6 +22,6 @@
     "webpack-dev-server": "^3.5.1"
   },
   "dependencies": {
-    "xlsx": "^0.14.3"
+    "xlsx": "^0.17.0"
   }
 }
